@@ -1,6 +1,6 @@
-= JSON Schema validator generator
+# JSON Schema validator generator
 
-Wraps ajv compile function to create a schema validator that can be directly use from cli. All arguments are passed to "ajv compile" function, but after generation a "cli usability" snippet is added to the generated file.
+Wraps [ajv](https://www.npmjs.com/package/ajv) compile function to create a schema validator that can be directly use from cli. All arguments are passed to "ajv compile" function, but after generation a "cli usability" snippet is added to the generated file.
 
 ## Usage
 

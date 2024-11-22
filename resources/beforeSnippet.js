@@ -1,12 +1,12 @@
-#!/bin/env node
+#!/usr/bin/env node
 function main() {
     const schemaValidator = validate20;
     const fs = require('fs');
     const files = process.argv.slice(2);
     if(files.indexOf("-h") > -1 || files.indexOf("--help") > -1) {
         console.log("Usage:");
-        console.log(`\t${process.argv[1]} [json-filepaths-to-validate...]`);
-        console.log(`\techo '{"jsonData":"to validate"}' | ${process.argv[1]}`);
+        console.log(`    ${process.argv[1]} <json-filepaths-to-validate...>`);
+        console.log(`    echo '{"jsonData":"to validate"}' | ${process.argv[1]}`);
         console.log("Schema:", JSON.stringify(schema22, null, 4));
         process.exit(0);
     }
@@ -18,7 +18,7 @@ function main() {
         const rawData=fs.readFileSync(file, 'utf-8');
         const fail = (...args) => {
             console.log(...args);
-            console.log(`Wrong JSON in file: "${file ?? "stdin"}"`, rawData);
+            console.log(`Wrong JSON in file: "${file == 0 ? "stdin" : file}"`, rawData);
             process.exit(1);
         }
         try {
