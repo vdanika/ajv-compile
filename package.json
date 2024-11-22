@@ -1,10 +1,22 @@
 {
   "name": "ajv-compile",
-  "version": "0.1.1",
-  "description": "",
+  "version": "0.1.9",
+  "description": "Generetes JSON Schema validator using ajv",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ajv",
+    "json",
+    "schema",
+    "cli"
+  ],
+  "author": "vdanika",
+  "license":  "GPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vdanika/ajv-compile.git"
   },
   "bin": {
     "ajv-compile": "index.js"
